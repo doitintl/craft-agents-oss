@@ -23,7 +23,7 @@ Sentry.init({
   release: app.getVersion(),
   // Enabled whenever the ingest URL is available — works in both production (baked via CI)
   // and development (injected via .env / 1Password). Filter by environment in Sentry dashboard.
-  enabled: !!process.env.SENTRY_ELECTRON_INGEST_URL,
+  enabled: false,
 
   // Scrub sensitive data before sending to Sentry.
   // Removes authorization headers, API keys/tokens, and credential-like values.
